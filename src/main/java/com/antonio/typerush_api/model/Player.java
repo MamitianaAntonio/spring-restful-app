@@ -1,21 +1,23 @@
 package com.antonio.typerush_api.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import lombok.Getter;
-import lombok.Setter;
+import jakarta.persistence.*;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
 @Entity
+@Table(name = "players")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
+@Builder
 public class Player {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private long id;
+  @Column(nullable = false)
   private String name;
   private int score;
   private LocalDateTime createdAt;
