@@ -12,14 +12,18 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Getter
 @Setter
-@Builder
 public class Player {
   // implement primary key
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private long id;
+  private Long id;
   @Column(nullable = false)
   private String name;
   private int score;
   private LocalDateTime createdAt;
+
+  @PrePersist
+  public void onCreate() {
+    this.createdAt = LocalDateTime.now();
+  }
 }
