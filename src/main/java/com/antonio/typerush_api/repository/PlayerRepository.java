@@ -4,6 +4,7 @@ import com.antonio.typerush_api.model.Player;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+// extends all jpa crud on PlayerRepository
 @Repository
 public interface PlayerRepository extends JpaRepository<Player, Long> {
 }

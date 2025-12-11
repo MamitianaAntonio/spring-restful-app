@@ -14,6 +14,7 @@ import java.time.LocalDateTime;
 @Setter
 @Builder
 public class Player {
+  // implement primary key
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private long id;
