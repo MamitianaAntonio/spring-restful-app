@@ -1,4 +1,4 @@
-package com.antonio.restful_api;
+package com.antonio.typerush_api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
